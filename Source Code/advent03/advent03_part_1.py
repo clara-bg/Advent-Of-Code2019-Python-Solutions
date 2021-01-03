@@ -5,7 +5,7 @@ Created on Sat Jan  2 19:42:23 2021
 @author: Clara
 """
 
-f = open(r"..\Inputs\03.txt")
+f = open(r"..\..\Inputs\03.txt")
 data = f.read()
 data = data.splitlines()
 f.close()
