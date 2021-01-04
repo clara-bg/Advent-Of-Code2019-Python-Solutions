@@ -11,7 +11,7 @@ data = [1,0,0,3,1,1,2,3,1,3,4,3,1,5,0,3,2,1,9,19,1,19,5,23,2,6,23,27,1,6,27,31,2
 data[1] = 12
 data[2] = 2
 
-def my_func(data):
+def intcode(data):
     data = data[:]  # Creates a shallow copy
     for i in range(0, len(data), 4):
         operator = data[i]
@@ -25,13 +25,13 @@ def my_func(data):
             data[data[i + 3]] = firstnum * secondnum
     return data[0]
 
-print('Part A: The value at position 0 is =', my_func(data))
+print('Part A: The value at position 0 is =', intcode(data))
 
 for noun in range(100):
     for verb in range(100):
         data[1] = noun
         data[2] = verb
-        output = my_func(data)
+        output = intcode(data)
         if output == 19690720:
             answer = 100 * noun + verb
             print('Part B: 100 * noun + verb =', answer)
