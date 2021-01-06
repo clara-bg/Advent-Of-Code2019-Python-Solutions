@@ -79,6 +79,6 @@ def get_value(data, position, immediate):
 print('Part A: The diagnostic code =')
 intcode(data.copy(), 1)
 
-print('\nPart B: The diagnostic code fro system ID 5  =')
+print('\nPart B: The diagnostic code for system ID 5  =')
 intcode(data.copy(), 5)
     
